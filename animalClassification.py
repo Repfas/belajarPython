@@ -31,9 +31,15 @@ class Moluska(Animalia):
               f'filum = Moluska \n\t'
               f'kelas = {self.kelas}\n\t'
               f'ordo = {self.ordo}')
-breakpoint()
+class Platyhelmintes(Animalia):
+    def __init__(self,name,kelas,ordo,ciri_ciri):
+        super().__init__(name,kelas,ordo)
+        self.ciri_ciri = ciri_ciri
+    def informasi(self):
+        super().informasi()
+        print(self.ciri_ciri)
 manusia = Chordata('Manusia','Mamalia','Primata')
 spongia = Porifera('Spongia','Demospongiae','Dictyoceratida')
 octopus = Moluska('Octopus','Sefalopoda','Octopoda')
-
+Cacing = Platyhelmintes('cacing','cacing','cacing','tidak punya kaki')
 manusia.informasi()
