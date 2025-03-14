@@ -38,8 +38,18 @@ class Platyhelmintes(Animalia):
     def informasi(self):
         super().informasi()
         print(self.ciri_ciri)
+        
+class Nemathelmintes(Animalia):
+    def __init__(self, name, kelas, ordo, jenis):
+        super().__init__(name,kelas,ordo)
+        self.jenis = jenis
+    def informasi(self):
+        super().informasi()
+        print(self.jenis)
+
 manusia = Chordata('Manusia','Mamalia','Primata')
 spongia = Porifera('Spongia','Demospongiae','Dictyoceratida')
 octopus = Moluska('Octopus','Sefalopoda','Octopoda')
-Cacing = Platyhelmintes('cacing','cacing','cacing','tidak punya kaki')
+cacing = Platyhelmintes('cacing','cacing','cacing','tidak punya kaki')
+cacing1Nemathelmintes('a','b','c','d',)
 manusia.informasi()
